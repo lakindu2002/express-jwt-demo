@@ -63,7 +63,6 @@ app.get('/users/:userId', validateRequest('admin'), (req, res) => {
     const { params } = req;
     const { userId } = params;
 
-    console.log({ userId });
     const user = users.find((user) => user.id === userId);
 
     if (!user) {
